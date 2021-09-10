@@ -17,6 +17,10 @@
 + Wifi 安装应用【在没有数据线的情况下，可以将电脑上的apk文件通过wifi的形式安装到手机上，👍🏻】
 + 安全，app不会收集你的任何信息，代码也开源了；即使不小心泄露了ApiKey，你可以去蒲公英后台重置一下ApiKey，之前的ApiKey就失效了
 
+## 主界面
+
+<img src="screenshot/device-2021-09-10-165337.png" alt="image-20210910165438719" style="zoom:33%;" />
+
 ## 怎么使用呢？
 + 一、下载项目目录中的apk文件[点我下载](https://raw.githubusercontent.com/MZCretin/CMAppDownload/master/app.apk)，进行安装;
 
