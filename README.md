@@ -19,7 +19,7 @@
 
 ## 主界面
 
-<div align=center ><img width="100%" height="100%" src="./screenshot/device-2021-09-10-165337.png"  alt="UI_THEME_A"/></div>
+<div align=center ><img width="30%" height="100%" src="./screenshot/device-2021-09-10-165337.png"  alt="UI_THEME_A"/></div>
 
 ## 怎么使用呢？
 + 一、下载项目目录中的apk文件[点我下载](https://raw.githubusercontent.com/MZCretin/CMAppDownload/master/app.apk)，进行安装;
