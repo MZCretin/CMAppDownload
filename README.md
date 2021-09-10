@@ -18,7 +18,7 @@
 + 安全，app不会收集你的任何信息，代码也开源了；即使不小心泄露了ApiKey，你可以去蒲公英后台重置一下ApiKey，之前的ApiKey就失效了
 
 ## 怎么使用呢？
-+ 一、下载项目目录中的apk文件[]，进行安装;
++ 一、下载项目目录中的apk文件[点我下载](https://raw.githubusercontent.com/MZCretin/CMAppDownload/master/app.apk)，进行安装;
 
 + 二、打开app，点击右上角设置->绑定appKey;
 
