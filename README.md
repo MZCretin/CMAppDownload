@@ -4,6 +4,8 @@
 
 因为我们公司旗下app很多个，测试人员在下载新版本进行测试的时候不是很方便，于是在职期间给测试开发了一款App安装工具，旨在加快下载安装新版本的流程，也能更方便的查看和安装历史版本~
 
+然后有个朋友也要用，让我干脆开源一下~
+
 ## 前提
 这个工具会拉取蒲公英平台里面指定token下的app信息，所以如果你们公司的app使用的是蒲公英就可以使用这个东西了~
 
@@ -19,7 +21,7 @@
 
 ## 主界面
 
-<div align=center ><img width="30%" height="100%" src="./screenshot/device-2021-09-10-165337.png"  alt="UI_THEME_A"/></div>
+<div align=center ><img width="100%" height="100%" src="./screenshot/device-2021-09-10-165337.png"  alt="UI_THEME_A"/></div>
 
 ## 怎么使用呢？
 + 一、下载项目目录中的apk文件[点我下载](https://raw.githubusercontent.com/MZCretin/CMAppDownload/master/app.apk)，进行安装;
@@ -37,5 +39,8 @@
       将你的手机连接到电脑，保证能正常使用adb功能，在命令行输入以下命令：
       adb shell input text "你的ApiKey"
       ```
-      
-      
+
+## 后续
+
+我看看大家的反应，如果大家觉得有用，我就集成下fir.im
+
