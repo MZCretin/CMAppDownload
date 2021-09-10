@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:background="@mipmap/bg_toast"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_toast_fail"/>
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="错误次数已达上限\n请重新登录"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+</LinearLayout>

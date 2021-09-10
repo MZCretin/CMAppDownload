@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">安卓App助手</string>
+
+    <string name="main_tab_01">首页</string>
+    <string name="main_tab_02">首页</string>
+    <string name="main_tab_03">首页</string>
+    <string name="main_tab_04">首页</string>
+    <string name="main_tab_05">首页</string>
+
+    <string name="loading">正在加载</string>
+    <string name="loadFail">网络似乎断了...</string>
+    <string name="loadFail_reload">点击屏幕重试</string>
+    <string name="no_data">啥都没有</string>
+    <string name="load_all_finish">全部加载完毕</string>
+    <string name="common_request_err">请求超时，请稍后再试</string>
+    <string name="is_request_loading">加载中...</string>
+    <string name="cancel">取消</string>
+    <string name="know">知道了</string>
+    <string name="err_http_server_exception">服务器异常</string>
+    <string name="err_http_json_error">解析错误</string>
+    <string name="err_http_network_err">连接失败，请检查网络</string>
+    <string name="err_http_num_error">数字格式化异常</string>
+    <string name="data_obtain_success">数据返回成功</string>
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/head_LL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_color"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="6">
+
+                <TextView
+                    android:id="@+id/iv_top_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:drawableLeft="@mipmap/arrow_left_white"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="5dp"
+                    android:text="返回"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="关闭"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="6">
+
+                <TextView
+                    android:id="@+id/tv_top_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:clickable="true"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:visibility="invisible"/>
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/more"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_flag"
+            android:layout_gravity="right"
+            android:background="@color/transparent"
+            android:layout_marginTop="-1dp"
+            android:layout_width="50dp"
+            android:layout_height="1dp"/>
+
+        <View
+            android:id="@+id/line_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/app_bg_color"></View>
+    </LinearLayout>
+</LinearLayout>

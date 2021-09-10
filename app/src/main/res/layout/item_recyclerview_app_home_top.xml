@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/android_icon"
+        android:drawablePadding="2dp"
+        android:gravity="center"
+        android:text="V1.0.0"
+        android:paddingTop="4dp"
+        android:textColor="@color/black_333333"
+        android:textSize="@dimen/text_size_10"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_icon"
+        app:layout_constraintRight_toRightOf="@+id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@+id/iv_icon" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingRight="16dp"
+        android:singleLine="true"
+        android:text="深空编程课"
+        android:textColor="#191919"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/iv_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_icon" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="2021-05-21 16:50:06更新"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="3dp"
+        android:paddingRight="16dp"
+        android:text="2021-05-21 16:50:06更新"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time" />
+
+    <TextView
+        android:id="@+id/tv_delete"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_title"
+        android:padding="16dp"
+        android:textColor="@color/red_ef0000"
+        android:text="删除文件"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/selecter_bg_round_btn"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="安装"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@+id/iv_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFefefef"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
