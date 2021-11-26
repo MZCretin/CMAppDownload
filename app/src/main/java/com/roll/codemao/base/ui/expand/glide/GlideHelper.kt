@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.roll.codemao.base.ui.helper.ImageEngineCallback
 import com.roll.codemao.base.ui.helper.RoundedCornersTransformation
+import com.roll.codemao.ui.MainActivity
 
 /**
  * @date: on 2019-11-21
@@ -163,5 +164,7 @@ object GlideHelper {
             }
         }
     }
+
+
 }
 

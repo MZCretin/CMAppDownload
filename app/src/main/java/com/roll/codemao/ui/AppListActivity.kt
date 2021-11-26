@@ -35,7 +35,13 @@ class AppListActivity : BaseActivity<LayoutRecyclerviewWithRefreshBinding>() {
     private var appKey = ""
 
     companion object {
-        fun start(context: Context, appKey: String, buildKey: String, appName: String, buildPassword: String) {
+        fun start(
+            context: Context,
+            appKey: String,
+            buildKey: String,
+            appName: String,
+            buildPassword: String
+        ) {
             val bundle = Bundle()
             bundle.putString("appKey", appKey)
             bundle.putString("buildKey", buildKey)
@@ -116,19 +122,40 @@ class AppListActivity : BaseActivity<LayoutRecyclerviewWithRefreshBinding>() {
     }
 
     inner class RecyclerAdapter(datas: MutableList<HomeAppListResp>) :
-            BaseQuickAdapter<HomeAppListResp, BaseViewHolder>(R.layout.item_recyclerview_app_home, datas) {
+        BaseQuickAdapter<HomeAppListResp, BaseViewHolder>(
+            R.layout.item_recyclerview_app_home,
+            datas
+        ) {
         override fun convert(helper: BaseViewHolder?, item: HomeAppListResp) {
             //获取链接
             val url = StringBuilder("https://cdn-app-icon.pgyer.com")
-            item.buildIcon.substring(0, 5).forEach {
-                url.append("/$it")
+            if (item.buildIcon.length >= 5) {
+                item.buildIcon.substring(0, 5).forEach {
+                    url.append("/$it")
+                }
+                url.append("/" + item.buildIcon + "?x-oss-process=image/resize,m_lfit,h_120,w_120/format,jpg")
+                GlideHelper.loadRoundImage(
+                    this@AppListActivity,
+                    helper?.getView<ImageView>(R.id.iv_icon)!!,
+                    url.toString()
+                )
+            } else {
+                GlideHelper.loadRoundImage(
+                    this@AppListActivity,
+                    helper?.getView<ImageView>(R.id.iv_icon)!!,
+                    resources.getDrawable(R.mipmap.app_logo)
+                )
             }
-            url.append("/" + item.buildIcon + "?x-oss-process=image/resize,m_lfit,h_120,w_120/format,jpg")
 
-            GlideHelper.loadRoundImage(this@AppListActivity, helper?.getView<ImageView>(R.id.iv_icon)!!, url.toString())
             helper?.setText(R.id.tv_title, item.buildName)
-            helper?.setText(R.id.tv_desc, "更新说明：(第" + item.buildBuildVersion + "次打包)\n" + item.buildUpdateDescription)
-            helper?.setText(R.id.tv_time, item.buildCreated + " 更新      " + FileUtils.getPrintSize(item.buildFileSize.toLong()))
+            helper?.setText(
+                R.id.tv_desc,
+                "更新说明：(第" + item.buildBuildVersion + "次打包)\n" + item.buildUpdateDescription
+            )
+            helper?.setText(
+                R.id.tv_time,
+                item.buildCreated + " 更新      " + FileUtils.getPrintSize(item.buildFileSize.toLong())
+            )
 
             helper?.getView<TextView>(R.id.tv_btn)?.apply {
                 if (item.buildType == "1") {
@@ -144,19 +171,31 @@ class AppListActivity : BaseActivity<LayoutRecyclerviewWithRefreshBinding>() {
                     }
                     val buildKey = item.buildKey
                     val buildPassword = intent?.getStringExtra("buildPassword") ?: ""
-                    val url = "https://www.pgyer.com/apiv2/app/install?_api_key=" + appKey + "&buildKey=" + buildKey + "&buildPassword=" + buildPassword
+                    val url =
+                        "https://www.pgyer.com/apiv2/app/install?_api_key=" + appKey + "&buildKey=" + buildKey + "&buildPassword=" + buildPassword
                     OpenAppUtils.openPhoneBrowser(this@AppListActivity, url)
                 }
             }
 
             helper?.getView<TextView>(R.id.tv_flag)?.apply {
-                text = if (item.buildVersion.contains("v")) item.buildVersion else "V" + item.buildVersion
+                text =
+                    if (item.buildVersion.contains("v")) item.buildVersion else "V" + item.buildVersion
                 if (item.buildType == "1") {
                     //iOS
-                    setCompoundDrawablesWithIntrinsicBounds(ResUtils.getDrawable(R.mipmap.ios_icon), null, null, null)
+                    setCompoundDrawablesWithIntrinsicBounds(
+                        ResUtils.getDrawable(R.mipmap.ios_icon),
+                        null,
+                        null,
+                        null
+                    )
                 } else {
                     //Android
-                    setCompoundDrawablesWithIntrinsicBounds(ResUtils.getDrawable(R.mipmap.android_icon), null, null, null)
+                    setCompoundDrawablesWithIntrinsicBounds(
+                        ResUtils.getDrawable(R.mipmap.android_icon),
+                        null,
+                        null,
+                        null
+                    )
                 }
             }
         }

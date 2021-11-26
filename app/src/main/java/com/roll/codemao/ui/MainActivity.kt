@@ -3,6 +3,7 @@ package com.roll.codemao.ui
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -133,7 +134,7 @@ class MainActivity : BaseActivity<LayoutRecyclerviewWithRefreshBinding>() {
                     )
                     .show()
                 KV.put(LocalStorageKeys.HOME_SHOW_TIPS, true)
-            }else{
+            } else {
                 showToast("请先绑定API_KEY")
             }
 
@@ -280,16 +281,26 @@ class MainActivity : BaseActivity<LayoutRecyclerviewWithRefreshBinding>() {
         override fun convert(helper: BaseViewHolder?, item: HomeAppListResp) {
             //获取链接
             val url = StringBuilder("https://cdn-app-icon.pgyer.com")
-            item.buildIcon.substring(0, 5).forEach {
-                url.append("/$it")
-            }
-            url.append("/" + item.buildIcon + "?x-oss-process=image/resize,m_lfit,h_120,w_120/format,jpg")
 
-            GlideHelper.loadRoundImage(
-                this@MainActivity,
-                helper?.getView<ImageView>(R.id.iv_icon)!!,
-                url.toString()
-            )
+            if (item.buildIcon.length >= 5) {
+                item.buildIcon.substring(0, 5).forEach {
+                    url.append("/$it")
+                }
+                url.append("/" + item.buildIcon + "?x-oss-process=image/resize,m_lfit,h_120,w_120/format,jpg")
+                GlideHelper.loadRoundImage(
+                    this@MainActivity,
+                    helper?.getView<ImageView>(R.id.iv_icon)!!,
+                    url.toString()
+                )
+            } else {
+                GlideHelper.loadRoundImage(
+                    this@MainActivity,
+                    helper?.getView<ImageView>(R.id.iv_icon)!!,
+                    resources.getDrawable(R.mipmap.app_logo)
+                )
+            }
+
+
             helper?.setText(R.id.tv_title, item.buildName)
             helper?.setText(
                 R.id.tv_desc,
