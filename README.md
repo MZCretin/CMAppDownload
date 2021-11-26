@@ -24,16 +24,16 @@
 <div align=center ><img width="33%" height="100%" src="./screenshot/device-2021-09-10-165337.png"  alt="UI_THEME_A"/></div>
 
 ## 怎么使用呢？
-+ 一、下载项目目录中的apk文件[点我下载](https://raw.githubusercontent.com/MZCretin/CMAppDownload/master/app.apk)，进行安装;
++ 一、下载项目目录中的apk文件[点我下载](https://raw.githubusercontent.com/MZCretin/CMAppDownload/master/app.apk)，如果你的网络对Github不友好，下载不下来，你可以[点我下载](https://www.pgyer.com/174B)进行安装;
 
 + 二、打开app，点击右上角设置->绑定appKey;
 
-+ 三、进入 https://www.pgyer.com/ 登录成功之后，点击右上角控制台，进入成功之后，点击右上角你的头像，在下拉菜单中点击api信息，就可以获取到ApiKey信息;
++ 三、进入 https://www.pgyer.com/ 登录成功之后，点击右上角控制台，进入成功之后，点击右上角你的头像，在下拉菜单中点击api信息，就可以获取到ApiKey信息，如果你只是想体验一下功能，可以用我这个key先体验下，41ad71debf5679b2a3c0614ed187c4af
 
 + 四、将第三步骤中获取到的ApiKey信息填充到数据框点击绑定即可使用了;
-   
+  
    + 如果你的手机里面没有微信，钉钉，qq之类的应用，不方便把ApiKey传输到app里面去，我给你一个方法
-      
+     
       ```
       进入到绑定ApiKey的页面，点击输入框使其获取焦点；
       将你的手机连接到电脑，保证能正常使用adb功能，在命令行输入以下命令：
