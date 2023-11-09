@@ -78,7 +78,7 @@
         app:layout_constraintTop_toTopOf="@+id/tv_title"
         android:padding="16dp"
         android:textColor="@color/red_ef0000"
-        android:text="删除文件"
+        android:text="长按OK删除文件"
         android:visibility="gone"
         android:textSize="@dimen/text_size_14"
         android:layout_width="wrap_content"

@@ -21,7 +21,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.ServerConnectActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ui.TopActivity" />
         <activity
             android:name=".ui.BindTokenActivity"
@@ -36,19 +42,15 @@
 
         <meta-data
             android:name="design_width_in_dp"
-            android:value="375" />
+            android:value="1280" />
         <meta-data
             android:name="design_height_in_dp"
-            android:value="667" />
+            android:value="720" />
 
         <activity
             android:name=".ui.MainActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ui.SplashActivity" />
     </application>
